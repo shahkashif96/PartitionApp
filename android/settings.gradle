@@ -1,3 +1,4 @@
-include ':app'
+rootProject.name = 'Partition'
 
-project(':app').projectDir = new File('app')
+include ':app'
+project(':app').projectDir = new File(rootDir, 'app')
