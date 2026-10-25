@@ -18,9 +18,14 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     
-    - name: Make gradlew executable
-      working-directory: ./android
-      run: chmod +x gradlew
+    - name: Download Gradle
+      run: |
+        cd android
+        mkdir -p gradle/wrapper
+        curl -L https://services.gradle.org/distributions/gradle-8.4-bin.zip -o gradle-8.4-bin.zip
+        unzip -q gradle-8.4-bin.zip
+        chmod +x gradle-8.4/bin/gradle
+        ./gradle-8.4/bin/gradle wrapper
     
     - name: Build APK
       working-directory: ./android
