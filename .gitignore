@@ -1,0 +1,11 @@
+node_modules/
+dist/
+www/
+.gradle/
+build/
+*.iml
+.idea/
+local.properties
+*.log
+gradle/wrapper/gradle-wrapper.jar
+.DS_Store
