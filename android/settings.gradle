@@ -1,1 +1,3 @@
+rootProject.name = 'Partition'
 include ':app'
+project(':app').projectDir = new File('app')
